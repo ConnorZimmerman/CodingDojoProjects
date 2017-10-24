@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JQuery Functions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var beforeBool = true;
+            var afterBool = true;
+            var attrBool = false;
+            $("#hideButton").click(function () {
+                $("#hideButton").hide();
+            })
+            $("#showButton").click(function () {
+                $("#hideButton").show();
+            })
+            $("#toggle").click(function () {
+                $("#toggle p").toggle();
+            })
+            $("#slideDown").click(function () {
+                $("#slideDown p").hide();
+                $("#slideDown p").slideDown();
+            })
+            $(".slideUp").click(function () {
+                $(".working").slideUp();
+            })
+            $("#slideToggle").click(function () {
+                $("#slideToggle p").slideToggle();
+            })
+            $("#fadeIn").click(function () {
+                $("#fadeIn p").hide();
+                $("#fadeIn p").fadeIn();
+            })
+            $("#fadeOut").click(function () {
+                $("#fadeOut p").fadeOut();
+            })
+            $("#addClass").click(function () {
+                $("#addClass p").addClass("working");
+            })
+            $("#before").click(function () {
+                if (beforeBool) {
+                    $("#before p").before("I just got here!");
+                    beforeBool = false;
+                }
+            })
+            $("#after").click(function () {
+                if (afterBool) {
+                    $("#after p").after("Too bad!");
+                    afterBool = false;
+                }
+            })
+            $("#append").click(function () {
+                $("#append p").append("here's a little more");
+            })
+            $("#html").click(function () {
+                $("#htmlP").html("Now Im different");
+            })
+            $("#attrButton").click(function () {
+                $("#attr hr").attr("width", "20px")
+            })
+            $("#val").click(function () {
+                $("#val input").val("Did you change our value?");
+            })
+            $("#text").click(function () {
+                $("#text p").text("What did I say!?")
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <p>JQuery Practice</p>
+            <hr />
+        </div>
+        <div id="bodyWrapper">
+            <div id="hideShow">
+                <button id="hideButton">Click to Hide</button>
+                <button id="showButton">Click to Show</button>
+                <hr />
+            </div>
+            <div id="toggle">
+                <button id="toggleButton">Click to Toggle</button>
+                <p>Now I'm here!</p>
+                <hr />
+            </div>
+            <div id="slideDown">
+                <button id="slideDownButton">Click to SlideDown</button>
+                <p>I slid down!</p>
+                <hr />
+            </div>
+            <div class="slideUp">
+                <button id="slideUpButton">Click to SlideUp</button>
+                <p class="working">I slid up!</p>
+                <hr />
+            </div>
+            <div id="slideToggle">
+                <button id="slideToggleButton">Click to SlideToggle</button>
+                <p>I'm slide toggling!</p>
+                <hr />
+            </div>
+            <div id="fadeIn">
+                <button id="fadeInButton">Click to FadeIn</button>
+                <p>I exist!</p>
+                <hr />
+            </div>
+            <div id="fadeOut">
+                <button id="fadeOutButton">Click to FadeOut</button>
+                <p>I dont wanna die!</p>
+                <hr />
+            </div>
+            <div id="addClass">
+                <button id="addClassButton">Click to AddClass</button>
+                <p>click slideUp button above to see class in action!</p>
+                <hr />
+            </div>
+            <div id="before">
+                <button id="beforeButton">Click to Before</button>
+                <p>I was here all along</p>
+                <hr />
+            </div>
+            <div id="after">
+                <button id="afterButton">Click to After</button>
+                <p>Don't come after me!</p>
+                <hr />
+            </div>
+            <div id="append">
+                <button id="appendButton">Click to Append</button>
+                <p>I'm fine just the way I am.</p>
+                <hr />
+            </div>
+            <div id="html">
+                <button>Click to Html</button>
+                <p id="htmlP">I'm me!</p>
+                <hr />
+            </div>
+            <div id="attr">
+                <button id="attrButton">Click to Attr</button>
+                <p>Watch this line below get small!</p>
+                <hr />
+            </div>
+            <div id="val">
+                <button id="valButton">Click to Val</button>
+                <input type="text" value="Don''t change me!" />
+                <hr />
+            </div>
+            <div id="text">
+                <button id="textButton">Click to Text</button>
+                <p>Don't change me!</p>
+                <hr />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
